@@ -15,6 +15,7 @@ namespace TamaguchiFinale
 {
     public class Startup
     {
+        //hi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
