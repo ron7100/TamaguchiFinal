@@ -7,9 +7,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TamaguchiFinale.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("Tamaguchi")]
     [ApiController]
     public class TamaguchiController : ControllerBase
     {
+
+        [Route("SignIn")]
+        [HttpPost]
+        public bool sign_in([FromBody] string u, string pass)
+        {
+
+        }
     }
+
 }
