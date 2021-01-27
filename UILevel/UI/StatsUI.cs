@@ -1,6 +1,5 @@
 ﻿using System;
-using TamaProg.UI;
-using TamaProg.Models;
+using TamaguchiClasses.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
@@ -17,10 +16,10 @@ namespace UILevel.UI
         {
             ScreenUI statsscreen = new ScreenUI("Stats");
             TryTamaContext bl = new TryTamaContext();
-            var curpet = bl.Pets.Where(cur => cur.Id == CurPlayer.curPlayer.Activepetid).OrderBy(cur => cur.Id).LastOrDefault();
+            var curpet = bl.Pets.Where(cur => cur.Id == MainUI.p.Activepetid).OrderBy(cur => cur.Id).LastOrDefault();
 
             // finds current operation:
-            Console.WriteLine($"Stats about the current pet of " + CurPlayer.GetPlayer().Username + " - " + curpet.Petname);
+            Console.WriteLine($"Stats about the current pet of " + MainUI.p.Username + " - " + curpet.Petname);
 
             var lifespan = bl.LifeSpans.Where(l => l.LifeSpanId == curpet.Lifespanid).OrderBy(r => r.LifeSpanId).LastOrDefault();
             var lifestatus = bl.LifeStatuses.Where(l => l.Lifestatusid == curpet.Lifestatusid).OrderBy(cur => cur.Lifestatusid).LastOrDefault();

@@ -1,6 +1,5 @@
 ﻿using System;
-using TamaProg.UI;
-using TamaProg.Models;
+using TamaguchiClasses.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
@@ -17,7 +16,7 @@ namespace UILevel.UI
         {
             ScreenUI pethistscreen = new ScreenUI("Pet History");
             TryTamaContext bl = new TryTamaContext();
-            var curpet = bl.Pets.Where(cur => cur.Id == CurPlayer.curPlayer.Activepetid).OrderBy(cur => cur.Id).LastOrDefault();
+            var curpet = bl.Pets.Where(cur => cur.Id == MainUI.p.Activepetid).OrderBy(cur => cur.Id).LastOrDefault();
             Console.WriteLine("List of operations history of the pet - " + curpet.Petname);
             TryTamaContext bl2 = new TryTamaContext();
             foreach (ActionsHistory act in bl.ActionsHistories.Where(cur => cur.PetId == curpet.Id))

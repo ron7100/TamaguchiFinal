@@ -1,6 +1,5 @@
 ﻿using System;
-using TamaProg.UI;
-using TamaProg.Models;
+using TamaguchiClasses.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
@@ -12,6 +11,7 @@ namespace UILevel.UI
 {
     public class MainUI : ScreenUI
     {
+        public static Player p { get; set; }
         public static void MainMenu()
         {
             Console.WriteLine("We Reached MainProg");

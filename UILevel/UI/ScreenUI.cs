@@ -1,6 +1,4 @@
 ﻿using System;
-using TamaProg.UI;
-using TamaProg.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
@@ -36,7 +34,7 @@ namespace UILevel.UI
         {
             Console.Clear();
             Title("Tamaguchi");
-            if (CurPlayer.curPlayer != null) Console.WriteLine($"Welcome {CurPlayer.curPlayer.Username}!");
+            if (MainUI.p != null) Console.WriteLine($"Welcome {MainUI.p.Username}!");
         }
 
         public ScreenUI(string titlename)

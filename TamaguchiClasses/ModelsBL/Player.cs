@@ -1,5 +1,4 @@
 ﻿using System;
-using TamaProg.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
@@ -8,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 
-namespace TamaguchiClasses.ModelsBL
+namespace TamaguchiClasses.Models
 {
     public partial class Player
     {

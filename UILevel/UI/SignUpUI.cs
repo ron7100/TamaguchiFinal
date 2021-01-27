@@ -1,6 +1,5 @@
 ﻿using System;
-using TamaProg.UI;
-using TamaProg.Models;
+using TamaguchiClasses.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;

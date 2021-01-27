@@ -1,6 +1,5 @@
 ﻿using System;
-using TamaProg.UI;
-using TamaProg.Models;
+using TamaguchiClasses.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
@@ -36,7 +35,7 @@ namespace UILevel.UI
             }
 
             // finds current pet:
-            var curpet = bl.Pets.Where(cur => cur.Id == CurPlayer.curPlayer.Activepetid).OrderBy(cur => cur.Id).LastOrDefault();
+            var curpet = bl.Pets.Where(cur => cur.Id == MainUI.p.Activepetid).OrderBy(cur => cur.Id).LastOrDefault();
 
             // finds current operation:
             var curopt = bl.ActionInfos.Where(cur => cur.Actioninfoid == IDSTART + opt).OrderBy(cur => cur.Actioninfoid).LastOrDefault();
