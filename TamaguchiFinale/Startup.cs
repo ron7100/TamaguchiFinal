@@ -10,12 +10,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using TamaguchiClasses;
 
 namespace TamaguchiFinale
 {
     public class Startup
-    {
-        //hi
+    {   
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
