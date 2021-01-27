@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 #nullable disable
 
-namespace TamaProg.Models
+namespace TamaguchiClasses.Models
 {
     [Table("LifeStatus")]
     public partial class LifeStatus

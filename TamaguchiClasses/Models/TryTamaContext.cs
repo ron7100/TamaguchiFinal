@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace TamaProg.Models
+#nullable disable
+
+namespace TamaguchiClasses.Models
 {
     public partial class TryTamaContext : DbContext
     {

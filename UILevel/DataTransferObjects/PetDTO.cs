@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace TamaguchiFinale.DataTransferObjects
+namespace UILevel.DataTransferObjects
 {
-    public class PetDTO
+    class PetDTO
     {
         public int AnimalId { get; set; }
         public string AnimalName { get; set; }

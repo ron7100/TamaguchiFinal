@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 
-namespace TamaProg.Models
+namespace TamaguchiClasses.ModelsBL
 {
     public partial class Pet
     {

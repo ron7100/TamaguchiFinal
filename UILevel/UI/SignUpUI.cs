@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 
-namespace TamaProg.UI
+namespace UILevel.UI
 {
     public class SignUpUI:ScreenUI
     {

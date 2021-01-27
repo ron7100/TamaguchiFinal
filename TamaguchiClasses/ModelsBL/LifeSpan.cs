@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TamaProg.Models
+namespace TamaguchiClasses.ModelsBL
 {
     public partial class LifeSpan
     {

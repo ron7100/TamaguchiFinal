@@ -7,6 +7,8 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+using UILevel.DataTransferObjects;
+using UILevel.WebServices;
 
 
 namespace TamaProg.UI
@@ -16,7 +18,7 @@ namespace TamaProg.UI
         public static void home_page_menu()
         {
             ScreenUI homepagescreen = new ScreenUI("Home Page");
-
+            PlayerDTO p = new PlayerDTO();
             const int OPTIONLEN = 4;
             const int PETOP = 1, PETSTATS = 2, PETHISTORY = 3, LOGOUT = 4;
             string[] optionsArr = { "Make your pet happier :)", "Stats about your pet", "Pet history", "Log out" };
@@ -39,7 +41,7 @@ namespace TamaProg.UI
                     PetHistoryUI.pet_history_menu();
                     return;
                 case LOGOUT:
-                    CurPlayer.curPlayer.sign_out();
+                    p.sign_out();
                     MainUI.MainMenu();
                     return;
             }

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace TamaguchiFinale.DataTransferObjects
+namespace UILevel.DataTransferObjects
 {
-    public class PlayerDTO
+    class PlayerDTO
     {
         public int PlayerId { get; set; }
         public string PlayerName { get; set; }

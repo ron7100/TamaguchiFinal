@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 #nullable disable
 
-namespace TamaProg.Models
+namespace TamaguchiClasses.Models
 {
     [Table("ActionsHistory")]
     public partial class ActionsHistory

@@ -1,5 +1,4 @@
 ﻿using System;
-using TamaProg.UI;
 using TamaProg.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 
-namespace TamaProg.Models
+namespace TamaguchiClasses.ModelsBL
 {
     public partial class Player
     {
@@ -60,23 +59,20 @@ namespace TamaProg.Models
             }
             return null;
         }
-
-        
-        //Signs in the curPlayer. Returns true if done successfully, false otherwise.
+      
+        //Signs in the Player. Returns true if done successfully, false otherwise.
         public bool sign_in()
         {
-            CurPlayer.curPlayer = this;
             bool found = has_player(this.Username, this.Pass);
             if(!found)
             {
                 Console.WriteLine("Player nor found. Wrong username or password...");
                 return false;
             }
-            CurPlayer.curPlayer = this;
             return true;
         }
         
-        //signs up a new player
+        //signs up a new player, then signs him in
         public void sign_up(TryTamaContext bl)
         {
             bl.Players.Add(this);
@@ -85,9 +81,9 @@ namespace TamaProg.Models
         }
 
         //Signs out the current player.
-        public void sign_out()
+        public static void sign_out(Player p)
         {
-            CurPlayer.curPlayer = null;
+            p = null;
         }
     }
 }

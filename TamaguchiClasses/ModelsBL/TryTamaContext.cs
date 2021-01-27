@@ -1,5 +1,4 @@
 ﻿using System;
-using TamaProg.UI;
 using TamaProg.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace TamaProg.Models
+namespace TamaguchiClasses.ModelsBL
 {
     public partial class TryTamaContext : DbContext
     {
