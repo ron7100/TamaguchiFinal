@@ -6,14 +6,17 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+using UILevel.WebServices;
 
 namespace UILevel.UI
 {
     public class MainUI : ScreenUI
     {
         public static Player p { get; set; }
+        public static WebApi api { get; set; }
         public static void MainMenu()
         {
+            api = new WebApi("Tamaguchi");
             Console.WriteLine("We Reached MainProg");
             ScreenUI menu = new ScreenUI("Main Menu");
 

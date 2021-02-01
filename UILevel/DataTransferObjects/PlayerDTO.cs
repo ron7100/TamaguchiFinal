@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UILevel.DataTransferObjects
 {
-    class PlayerDTO
+    public class PlayerDTO
     {
         public int PlayerId { get; set; }
         public string PlayerName { get; set; }

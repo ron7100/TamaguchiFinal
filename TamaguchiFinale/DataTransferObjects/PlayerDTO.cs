@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TamaguchiClasses.Models;
 
 namespace TamaguchiFinale.DataTransferObjects
 {
@@ -12,6 +13,13 @@ namespace TamaguchiFinale.DataTransferObjects
         public string PlayerFamilyName { get; set; }
         public string Email { get; set; }
         public DateTime BirthDate { get; set; }
-        public PlayerDTO() { }
+        public PlayerDTO(Player p) 
+        {
+            this.PlayerId = p.Id;
+            this.PlayerName = p.Fname;
+            this.PlayerFamilyName = p.Lname;
+            this.Email = p.Email;
+            this.BirthDate = p.Birthdate;
+        }
     }
 }

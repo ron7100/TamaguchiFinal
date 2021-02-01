@@ -8,7 +8,7 @@ using UILevel.DataTransferObjects;
 
 namespace UILevel.WebServices
 {
-    class WebApi
+    public class WebApi
     {
         private HttpClient client;
         private string baseUrl;

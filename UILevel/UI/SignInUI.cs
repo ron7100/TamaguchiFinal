@@ -1,11 +1,13 @@
 ﻿using System;
 using TamaguchiClasses.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+using UILevel.DataTransferObjects;
 
 
 namespace UILevel.UI
@@ -40,8 +42,7 @@ namespace UILevel.UI
                 }
                 foundPlayer = Player.has_player(username, pass);
             }
-            Player curplayer = Player.find_player(username, pass);
-            curplayer.sign_in();
+            Task<PlayerDTO> curPlayer = MainUI.api.sign_in_async(username, pass);
             HomePageUI.home_page_menu();
         }
     }
