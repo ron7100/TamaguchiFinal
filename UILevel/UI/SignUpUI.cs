@@ -2,10 +2,12 @@
 using TamaguchiClasses.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+using UILevel.DataTransferObjects;
 
 
 namespace UILevel.UI
@@ -37,7 +39,7 @@ namespace UILevel.UI
             DateTime d = new DateTime(year, month, day);
             TryTamaContext bl = new TryTamaContext();
             Player curp = new Player(fname, lname, username, pass, email, gender, d);
-            curp.sign_up(bl);
+            Task<PlayerDTO> curPlayer = MainUI.api.sign_in_async(username, pass);
             HomePageUI.home_page_menu();
         }
     }

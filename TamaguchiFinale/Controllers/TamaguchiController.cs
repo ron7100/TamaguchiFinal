@@ -40,5 +40,27 @@ namespace TamaguchiFinale.Controllers
                 return null;
             }
         }
+
+        [Route("SignUp")]
+        [HttpPost]
+        public PlayerDTO sign_up([FromQuery] Player p)
+        {
+            //Check user name and password
+            if (p != null)
+            {
+                p.sign_up();
+                PlayerDTO pDTO = new PlayerDTO(p);
+
+                HttpContext.Session.SetObject("player", pDTO);
+
+                Response.StatusCode = (int)System.Net.HttpStatusCode.OK;
+                return pDTO;
+            }
+            else
+            {
+                Response.StatusCode = (int)System.Net.HttpStatusCode.Forbidden;
+                return null;
+            }
+        }
     }
 }

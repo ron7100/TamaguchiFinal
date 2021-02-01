@@ -8,9 +8,5 @@
     <ProjectReference Include="..\TamaguchiClasses\TamaguchiClasses.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 
 </Project>

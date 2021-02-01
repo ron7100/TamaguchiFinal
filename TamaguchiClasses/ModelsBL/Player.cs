@@ -72,8 +72,9 @@ namespace TamaguchiClasses.Models
         }
         
         //signs up a new player, then signs him in
-        public void sign_up(TryTamaContext bl)
+        public void sign_up()
         {
+            TryTamaContext bl = new TryTamaContext();
             bl.Players.Add(this);
             bl.SaveChanges();
             this.sign_in();
