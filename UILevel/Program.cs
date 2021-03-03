@@ -1,4 +1,5 @@
 ﻿using System;
+using UILevel.UI;
 
 namespace UILevel
 {
@@ -7,6 +8,7 @@ namespace UILevel
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            MainUI.MainMenu();
         }
     }
 }
